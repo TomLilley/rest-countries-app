@@ -12,6 +12,9 @@ export default {
       '2xl': '1.5rem' /* 24px */,
       '3xl': '2rem' /* 32px */,
     },
+    minWidth: {
+      select: '12.5rem' /* 200px */,
+    },
     extend: {
       boxShadow: {
         header: '0 2px 4px hsl(0 0% 0% / 0.06)',
@@ -26,9 +29,19 @@ export default {
         verylightgrey: 'hsl(0, 0%, 98%)',
         medgrey: 'hsl(0, 0%, 52%)',
       },
+      gridTemplateColumns: {
+        countries: 'repeat(auto-fill,16.5rem)',
+      },
+      lineHeight: {
+        7.5: '1.875rem' /* 30px */,
+      },
+      maxWidth: {
+        container: '84rem' /* 1344px (1280 plus padding) */,
+      },
       spacing: {
-        18: '4.5rem',
-		68: '16.5rem'
+        18: '4.5rem' /* 72px */,
+        30: '7.5rem' /* 120px */,
+        68: '16.5rem' /* 264px */,
       },
     },
   },
