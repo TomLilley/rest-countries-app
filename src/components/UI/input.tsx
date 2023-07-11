@@ -21,16 +21,22 @@ export function SearchBox({
 }
 
 interface SelectBoxProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  title: string;
   options: string[];
 }
 
-export function SelectBox({ options, className, ...props }: SelectBoxProps) {
+export function SelectBox({
+  title,
+  options,
+  className,
+  ...props
+}: SelectBoxProps) {
   return (
     <select
       className={clsx('px-6 min-w-select', inputStyle, className)}
       {...props}
     >
-      <option value="">Filter by Region</option>
+      <option value="">{title}</option>
       {options.map((option) => (
         <option key={option} value={option}>
           {option}
