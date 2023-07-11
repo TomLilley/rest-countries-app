@@ -1,5 +1,5 @@
 import { CardWithImage } from '@/components/UI/card';
-import { Country } from '@/types';
+import { Country } from '@/utils/types';
 
 export default function CountryList({
   countryList,
