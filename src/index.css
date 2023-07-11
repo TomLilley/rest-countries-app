@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 300;
-    font-size: 0.875rem;
-    /* always show scroll bar to prevent layout shift when container grows/shrinks */
-    overflow-y: scroll;
+
+@layer base {
+    html {
+        /* remove tap highlight on mobile */
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 300;
+        font-size: 0.875rem;
+        /* always show scroll bar to prevent layout shift when container grows/shrinks */
+        overflow-y: scroll;
+    }
 }
