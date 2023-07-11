@@ -19,8 +19,6 @@ export default {
       boxShadow: {
         header: '0 2px 4px hsl(0 0% 0% / 0.06)',
         box: '0 0 7px 2px hsl(0 0% 0% / 0.03)',
-        button: '0 0 4px 1px hsl(0 0% 0% / 0.11)',
-        darkbutton: '0 0 4px 1px hsl(200 15% 8% / 0.25)',
       },
       colors: {
         darkblue: 'hsl(209, 23%, 22%)',

@@ -10,7 +10,7 @@ export function SearchBox({
 }: React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <div className="w-full max-w-md">
-      <SearchIcon className="h-4 w-4 lg:w-4.5 lg:h-4.5 absolute my-4 ml-8 fill:medgrey dark:fill-white" />
+      <SearchIcon className="h-4 w-4 lg:w-4.5 lg:h-4.5 absolute my-4 ml-8 fill-verydarkblue dark:fill-white" />
       <input
         className={clsx('pl-18 w-full pr-8', inputStyle, className)}
         type="text"
