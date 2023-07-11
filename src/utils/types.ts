@@ -49,6 +49,11 @@ export type CountryCode = {
   [code: string]: string;
 };
 
+export interface LinkHeader {
+  rel: string;
+  url: string;
+}
+
 // As we know the data is static, we can look up countries from an object
 // so we don't have to query the api to get the name of each country
 // to display the bordering countries in the CountryDetail view.
