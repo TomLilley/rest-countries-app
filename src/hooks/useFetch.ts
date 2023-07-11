@@ -1,16 +1,14 @@
 import { API_URL } from '@/utils/constants';
-import { formatLinksHeadersToPagination } from '@/utils/format';
+import { getLastPageFromLinksHeader } from '@/utils/helpers';
 import { parseLinksHeader } from '@/utils/parseLinksHeader';
-import { Country, Pagination, emptyPagination } from '@/utils/types';
+import { Country } from '@/utils/types';
 import { useState, useEffect } from 'react';
 
 export default function useFetch(searchParams?: string) {
   const [countriesList, setCountriesList] = useState<Country[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [pagination, setPagination] = useState<Pagination>({
-    ...emptyPagination,
-  });
+  const [lastPage, setLastPage] = useState(1);
 
   useEffect(() => {
     // reset loading on params change
@@ -24,8 +22,7 @@ export default function useFetch(searchParams?: string) {
         if (res.ok) {
           const countriesList = await res.json();
           const links = parseLinksHeader(res.headers.get('link') || '');
-          const pagination = formatLinksHeadersToPagination(links);
-          setPagination(pagination);
+          setLastPage(getLastPageFromLinksHeader(links));
           setCountriesList(countriesList);
           setLoading(false);
         } else {
@@ -41,5 +38,5 @@ export default function useFetch(searchParams?: string) {
     })();
   }, [searchParams]);
 
-  return { countriesList, loading, error, pagination };
+  return { countriesList, loading, error, lastPage };
 }

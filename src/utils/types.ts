@@ -58,16 +58,3 @@ export interface LinkHeader {
   rel: string;
   url: string;
 }
-
-export interface Pagination {
-  [key: string]: string;
-  first: string;
-  next: string;
-  last: string;
-}
-
-export const emptyPagination: Pagination = {
-  first: '',
-  next: '',
-  last: '',
-};

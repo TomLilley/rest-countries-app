@@ -1,4 +1,5 @@
 import { Button } from '@/components/UI/button';
+import { ArrowLeftIcon } from '@/components/UI/icons';
 import CountryDetail from '@/components/countryDetail';
 import useCountry from '@/hooks/useCountry';
 import ErrorView from '@/views/Error';
@@ -22,7 +23,10 @@ export default function CountryDetailView({
   return (
     <>
       <nav className="mt-10 mb-16 lg:mt-20 lg:mb-20">
-        <Button onClick={() => setCountry('')}>Go Back</Button>
+        <Button onClick={() => setCountry('')}>
+          <ArrowLeftIcon className="fill-verydarkblue dark:fill-white h-4.5 w-4.5 lg:h-5 lg:w-5 mr-2 lg:mr-2.5" />
+          Back
+        </Button>
       </nav>
       {loading ? (
         <LoadingView />

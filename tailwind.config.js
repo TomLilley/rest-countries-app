@@ -30,9 +30,6 @@ export default {
       gridTemplateColumns: {
         countries: 'repeat(auto-fill,16.5rem)',
       },
-      lineHeight: {
-        7.5: '1.875rem' /* 30px */,
-      },
       maxWidth: {
         container: '84rem' /* 1344px (1280 plus padding) */,
       },

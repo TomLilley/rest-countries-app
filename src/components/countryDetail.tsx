@@ -53,7 +53,7 @@ export default function CountryDetail({
           />
         </div>
         <div className="flex flex-wrap gap-x-2.5 gap-y-2.5">
-          <p className="font-semibold text-base mb-4 lg:mb-0 w-full lg:w-auto leading-7.5">
+          <p className="font-semibold text-base mb-4 lg:mb-0 w-full lg:w-auto leading-9">
             Border Countries:{' '}
             {!country.borders && <span className="font-light">None</span>}
           </p>
