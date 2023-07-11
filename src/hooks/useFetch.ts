@@ -8,6 +8,8 @@ export default function useFetch(searchParams?: string) {
   const [error, setError] = useState('');
 
   useEffect(() => {
+    // reset loading on params change
+    setLoading(true);
     const url = `${API_URL}?${searchParams}`;
 
     fetch(url)

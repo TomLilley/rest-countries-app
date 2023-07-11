@@ -1,15 +1,18 @@
 import { SearchBox, SelectBox } from '@/components/UI/input';
 import CountryList from '@/components/countryList';
 import { Country, Region } from '@/utils/types';
+import LoadingView from '@/views/Loading';
 
-export default function CountriesList({
+export default function CountriesListView({
   countriesList,
+  loading,
   searchQuery,
   handleSearchQueryChange,
   handleRegionChange,
   setCountry,
 }: {
   countriesList: Country[];
+  loading: boolean;
   searchQuery: string;
   handleSearchQueryChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   handleRegionChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -29,7 +32,11 @@ export default function CountriesList({
           onChange={handleRegionChange}
         />
       </form>
-      <CountryList countryList={countriesList} setCountry={setCountry} />
+      {loading ? (
+        <LoadingView />
+      ) : (
+        <CountryList countryList={countriesList} setCountry={setCountry} />
+      )}
     </>
   );
 }

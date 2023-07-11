@@ -1,4 +1,5 @@
 import { CardWithImage } from '@/components/UI/card';
+import { formatNumberToString } from '@/utils/format';
 import { Country } from '@/utils/types';
 
 export default function CountryList({
@@ -22,7 +23,7 @@ export default function CountryList({
             details={[
               {
                 title: 'Population',
-                body: country.population.toLocaleString(),
+                body: formatNumberToString(country.population),
               },
               { title: 'Region', body: country.region },
               { title: 'Capital', body: country.capital || 'None' },
