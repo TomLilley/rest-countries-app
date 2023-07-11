@@ -11,13 +11,14 @@ export default function CountryDetailView({
   countryCode: string;
   setCountry: (arg0: string) => void;
 }) {
-  const { data, loading, error } = useCountry(countryCode);
+  const { countriesList, loading, error } = useCountry(countryCode);
 
   if (!loading) {
     if (error) return <ErrorView error={error} />;
-    if (data.length < 1) return <ErrorView error="Country not found" />;
+    if (countriesList.length < 1)
+      return <ErrorView error="Country not found" />;
   }
-  const country = data[0];
+  const country = countriesList[0];
   return (
     <>
       <nav className="mt-10 mb-16 lg:mt-20 lg:mb-20">

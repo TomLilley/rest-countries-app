@@ -27,6 +27,7 @@ export default function CountriesListView({
           onChange={handleSearchQueryChange}
         />
         <SelectBox
+          className="min-w-select"
           title="Filter by Region"
           options={Object.values(Region)}
           onChange={handleRegionChange}

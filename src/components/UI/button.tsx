@@ -8,7 +8,7 @@ export function Button({
   return (
     <button
       className={clsx(
-        'text-xs py-1.5 px-8 shadow-button dark:shadow-darkbutton bg-white dark:bg-darkblue rounded-sm',
+        'text-xs py-1.5 px-8 shadow-button lg:text-base dark:shadow-darkbutton bg-white dark:bg-darkblue rounded-sm',
         className,
       )}
       {...props}

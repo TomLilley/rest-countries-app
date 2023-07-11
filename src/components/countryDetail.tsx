@@ -1,7 +1,8 @@
 import { Button } from '@/components/UI/button';
 import { LargeHeading, DetailsList } from '@/components/UI/text';
+import { CountryCodes } from '@/utils/constants';
 import { formatNumberToString, formatListToString } from '@/utils/format';
-import { Country, CountryCodes } from '@/utils/types';
+import { Country } from '@/utils/types';
 
 export default function CountryDetail({
   country,
