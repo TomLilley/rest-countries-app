@@ -1,6 +1,6 @@
 import useCountries from '@/hooks/useCountries';
 import { Region } from '@/utils/types';
-import CountriesList from '@/views/CountryList';
+import CountriesList from '@/views/CountriesList';
 import ErrorView from '@/views/Error';
 import LoadingView from '@/views/Loading';
 import { useState } from 'react';
@@ -8,6 +8,7 @@ import { useState } from 'react';
 export default function Countries() {
   const [searchQuery, setSearchQuery] = useState('');
   const [region, setRegion] = useState<Region | undefined>(undefined);
+  const [country, setCountry] = useState<string>('');
 
   const {
     data: countriesList,
@@ -31,12 +32,18 @@ export default function Countries() {
 
   if (loading) return <LoadingView />;
   if (error) return <ErrorView error={error} />;
-  return (
-    <CountriesList
-      countriesList={countriesList}
-      searchQuery={searchQuery}
-      handleSearchQueryChange={handleSearchQueryChange}
-      handleRegionChange={handleRegionChange}
-    />
-  );
+
+  if (country) {
+    return <div>Country: {country}</div>;
+  } else {
+    return (
+      <CountriesList
+        countriesList={countriesList}
+        searchQuery={searchQuery}
+        handleSearchQueryChange={handleSearchQueryChange}
+        handleRegionChange={handleRegionChange}
+        setCountry={setCountry}
+      />
+    );
+  }
 }

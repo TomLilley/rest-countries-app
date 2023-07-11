@@ -7,11 +7,13 @@ export default function CountriesList({
   searchQuery,
   handleSearchQueryChange,
   handleRegionChange,
+  setCountry,
 }: {
   countriesList: Country[];
   searchQuery: string;
   handleSearchQueryChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   handleRegionChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  setCountry: (country: string) => void;
 }) {
   return (
     <>
@@ -27,7 +29,7 @@ export default function CountriesList({
           onChange={handleRegionChange}
         />
       </form>
-      <CountryList countryList={countriesList} />
+      <CountryList countryList={countriesList} setCountry={setCountry} />
     </>
   );
 }
