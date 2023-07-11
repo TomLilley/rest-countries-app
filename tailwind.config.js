@@ -39,6 +39,7 @@ export default {
         container: '84rem' /* 1344px (1280 plus padding) */,
       },
       spacing: {
+        4.5: '1.125rem' /* 18px */,
         18: '4.5rem' /* 72px */,
         30: '7.5rem' /* 120px */,
         68: '16.5rem' /* 264px */,

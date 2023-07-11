@@ -1,5 +1,42 @@
 import { SVGProps } from 'react';
-export const MoonIcon = (props: SVGProps<SVGSVGElement>) => (
+
+export const DarkModeIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={48}
+    height={48}
+    viewBox="0 -960 960 960"
+    {...props}
+  >
+    <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q8 0 17 .5t23 1.5q-36 32-56 79t-20 99q0 90 63 153t153 63q52 0 99-18.5t79-51.5q1 12 1.5 19.5t.5 14.5q0 150-105 255T480-120Z" />
+  </svg>
+);
+
+export const SearchIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={48}
+    height={48}
+    viewBox="0 -960 960 960"
+    {...props}
+  >
+    <path d="M796-121 533-384q-30 26-69.959 40.5T378-329q-108.162 0-183.081-75Q120-479 120-585t75-181q75-75 181.5-75t181 75Q632-691 632-584.85 632-542 618-502q-14 40-42 75l264 262-44 44ZM377-389q81.25 0 138.125-57.5T572-585q0-81-56.875-138.5T377-781q-82.083 0-139.542 57.5Q180-666 180-585t57.458 138.5Q294.917-389 377-389Z" />
+  </svg>
+);
+
+export const ArrowLeftIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={48}
+    height={48}
+    viewBox="0 -960 960 960"
+    {...props}
+  >
+    <path d="M400-240 160-480l241-241 43 42-169 169h526v60H275l168 168-43 42Z" />
+  </svg>
+);
+
+export const MoonIconOld = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height="1em"
@@ -10,7 +47,7 @@ export const MoonIcon = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const SearchIcon = (props: SVGProps<SVGSVGElement>) => (
+export const SearchIconOld = (props: SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" {...props}>
     <g>
       <path d="M27.7 47.1C17 47.1 8.2 38.4 8.2 27.6c0-10.7 8.7-19.5 19.5-19.5s19.5 8.7 19.5 19.5c-.1 10.8-8.8 19.5-19.5 19.5zm0-36.1C18.5 11 11 18.5 11 27.7s7.5 16.7 16.7 16.7 16.7-7.5 16.7-16.7C44.3 18.5 36.8 11 27.7 11z" />
