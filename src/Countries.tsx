@@ -20,8 +20,6 @@ export default function Countries() {
     page,
   );
 
-  console.log(lastPage);
-
   const handleSearchQueryChange = (
     event: React.ChangeEvent<HTMLInputElement>,
   ) => {
@@ -47,7 +45,6 @@ export default function Countries() {
   if (country) {
     return <CountryDetailView countryCode={country} setCountry={setCountry} />;
   } else {
-    console.log(lastPage);
     return (
       <>
         <CountriesListView

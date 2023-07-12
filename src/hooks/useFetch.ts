@@ -32,7 +32,6 @@ export default function useFetch(searchParams?: string) {
         if (error instanceof Error) {
           setError(error.message);
           setLoading(false);
-          console.error(error.message);
         }
       }
     })();
