@@ -24,7 +24,7 @@ export default function CountryDetailView({
     <>
       <nav className="mt-10 mb-16 lg:mt-20 lg:mb-20">
         <Button onClick={() => setCountry('')}>
-          <ArrowLeftIcon className="fill-verydarkblue dark:fill-white h-4.5 w-4.5 lg:h-5 lg:w-5 mr-2 lg:mr-2.5" />
+          <ArrowLeftIcon className="h-4.5 w-4.5 lg:h-5 lg:w-5 mr-2 lg:mr-2.5" />
           Back
         </Button>
       </nav>

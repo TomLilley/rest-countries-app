@@ -16,7 +16,7 @@ export default function Header({
           type="button"
           onClick={toggleDarkMode}
         >
-          <DarkModeIcon className="mr-2 fill-verydarkblue dark:fill-white w-4 h-4 lg:h-5 lg:w-5" />
+          <DarkModeIcon className="mr-2 w-4 h-4 lg:h-5 lg:w-5" />
           Dark Mode
         </button>
       </Container>

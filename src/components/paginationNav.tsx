@@ -17,21 +17,21 @@ export default function PaginationNav({
   return (
     <nav className="mt-10 flex space-x-8 justify-center">
       <Button
-        className="dark:fill-white dark:disabled:fill-verydarkblue fill-verydarkblue disabled:fill-medgrey"
+        className="dark:disabled:fill-verydarkblue disabled:fill-medgrey"
         onClick={() => setPage(page - 1)}
         disabled={page === 1}
       >
         <ArrowLeftIcon className="h-4.5 w-4.5 lg:h-5 lg:w-5" />
       </Button>
       <SelectBox
-        className="pl-8 pr-12"
+        className="pl-8 pr-10"
         onChange={handlePageChange}
         options={range(lastPage)}
         value={page.toString()}
         disabled={lastPage === 1}
       />
       <Button
-        className="dark:fill-white dark:disabled:fill-verydarkblue fill-verydarkblue disabled:fill-medgrey"
+        className="dark:disabled:fill-verydarkblue disabled:fill-medgrey"
         onClick={() => setPage(page + 1)}
         disabled={page === lastPage || lastPage === 1}
       >
