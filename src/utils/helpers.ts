@@ -13,12 +13,12 @@ export const getPageFromUrl = (url: string) => {
 };
 
 export const getLastPageFromLinksHeader = (links: LinkHeader[]): number => {
+  console.log(links);
   const lastLink = links.find((link) => link.rel === 'last');
 
   if (lastLink) {
     const lastPage = parseInt(getPageFromUrl(lastLink.url));
     return Number.isNaN(lastPage) || lastPage <= 1 ? 1 : lastPage;
   }
-
   return 1;
 };
