@@ -28,6 +28,7 @@ export default function CountriesListView({
           onChange={handleSearchQueryChange}
         />
         <SelectBox
+          aria-label="Filter by Region"
           className="min-w-select"
           title="Filter by Region"
           options={Object.values(Region)}
