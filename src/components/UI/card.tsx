@@ -16,6 +16,7 @@ export function CardWithImage({
         src={image}
         height={160}
         width={264}
+        alt={`Flag of ${name}`}
       />
       <div className="mx-6 mt-6 mb-12 space-y-4">
         <SmallHeading>{name}</SmallHeading>

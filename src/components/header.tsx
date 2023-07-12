@@ -12,6 +12,7 @@ export default function Header({
       <Container className="flex items-center justify-between py-7">
         <MainHeading>Where in the world?</MainHeading>
         <button
+          aria-label={`Toggle dark mode`}
           className="font-semibold text-xs inline-flex items-center lg:text-base"
           type="button"
           onClick={toggleDarkMode}

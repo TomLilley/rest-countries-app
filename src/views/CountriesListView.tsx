@@ -22,6 +22,7 @@ export default function CountriesListView({
     <>
       <form className="lg:mb-12 mb-8 md:flex md:justify-between space-y-8 md:space-y-0">
         <SearchBox
+          aria-label="Search for a country"
           placeholder="Search for a country..."
           value={searchQuery}
           onChange={handleSearchQueryChange}

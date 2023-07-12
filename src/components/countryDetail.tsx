@@ -13,7 +13,11 @@ export default function CountryDetail({
 }) {
   return (
     <article className="grid lg:grid-cols-2 lg:gap-30 gap-10 items-center justify-center">
-      <img className="rounded-md" src={country.flags.svg} />
+      <img
+        className="rounded-md"
+        src={country.flags.svg}
+        alt={`Flag of ${country.name}`}
+      />
       <div className="space-y-8">
         <LargeHeading>{country.name}</LargeHeading>
         <div className="grid lg:grid-cols-2 gap-y-8">
