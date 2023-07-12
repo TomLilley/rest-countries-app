@@ -1,4 +1,4 @@
-import { CountryCode } from '@/utils/types';
+import { CountryCode } from '@/types/types';
 
 export const API_URL = 'https://rest-countries-server.vercel.app/countries/';
 

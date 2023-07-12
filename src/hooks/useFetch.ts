@@ -1,7 +1,7 @@
-import { API_URL } from '@/utils/constants';
+import { API_URL } from '@/constants/constants';
 import { getLastPageFromLinksHeader } from '@/utils/helpers';
-import { parseLinksHeader } from '@/utils/parseLinksHeader';
-import { Country } from '@/utils/types';
+import { parseLinksHeader } from '@/utils/parse';
+import { Country } from '@/types/types';
 import { useState, useEffect } from 'react';
 
 export default function useFetch(searchParams?: string) {

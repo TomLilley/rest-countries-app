@@ -1,4 +1,4 @@
-import { LinkHeader } from '@/utils/types';
+import { LinkHeader } from '@/types/types';
 
 // range function, accepts number n, returns a list of strings in the range [1, n]
 export const range = (n: number) => {
@@ -12,14 +12,13 @@ export const getPageFromUrl = (url: string) => {
   return urlParams.get('_page') || '';
 };
 
-// get the last page number from the links header
-export const getLastPageFromLinksHeader = (links: LinkHeader[]) => {
-  for (const link of links) {
-    if (link.rel === 'last') {
-      const lastPage = parseInt(getPageFromUrl(link.url));
-      if (lastPage <= 1 || Number.isNaN(lastPage)) return 1;
-      return lastPage;
-    }
+export const getLastPageFromLinksHeader = (links: LinkHeader[]): number => {
+  const lastLink = links.find((link) => link.rel === 'last');
+
+  if (lastLink) {
+    const lastPage = parseInt(getPageFromUrl(lastLink.url));
+    return Number.isNaN(lastPage) || lastPage <= 1 ? 1 : lastPage;
   }
+
   return 1;
 };

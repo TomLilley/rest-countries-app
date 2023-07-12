@@ -1,4 +1,4 @@
-import { LinkHeader } from '@/utils/types';
+import { LinkHeader } from '@/types/types';
 
 // parses Link headers from an HTTP response and returns them as a list of
 // type LinkHeader. We assume that each Link only has one parameter rel

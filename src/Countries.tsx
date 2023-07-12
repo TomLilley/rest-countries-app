@@ -3,7 +3,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@/components/UI/icons';
 import { SelectBox } from '@/components/UI/input';
 import useCountries from '@/hooks/useCountries';
 import { range } from '@/utils/helpers';
-import { Region } from '@/utils/types';
+import { Region } from '@/types/types';
 import CountriesListView from '@/views/CountriesListView';
 import CountryDetailView from '@/views/CountryDetailView';
 import ErrorView from '@/views/Error';

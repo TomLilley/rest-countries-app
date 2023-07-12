@@ -1,8 +1,8 @@
 import { Button } from '@/components/UI/button';
 import { LargeHeading, DetailsList } from '@/components/UI/text';
-import { CountryCodes } from '@/utils/constants';
+import { CountryCodes } from '@/constants/constants';
 import { formatNumberToString, formatListToString } from '@/utils/format';
-import { Country } from '@/utils/types';
+import { Country } from '@/types/types';
 
 export default function CountryDetail({
   country,
@@ -60,7 +60,7 @@ export default function CountryDetail({
           {country.borders &&
             country.borders.map((border) => (
               <Button key={border} onClick={() => setCountry(border)}>
-                {CountryCodes[border]}
+                {CountryCodes[border] || border}
               </Button>
             ))}
         </div>

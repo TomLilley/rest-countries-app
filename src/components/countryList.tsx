@@ -1,6 +1,6 @@
 import { CardWithImage } from '@/components/UI/card';
 import { formatNumberToString } from '@/utils/format';
-import { Country } from '@/utils/types';
+import { Country } from '@/types/types';
 
 export default function CountryList({
   countryList,

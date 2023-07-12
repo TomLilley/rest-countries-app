@@ -1,4 +1,4 @@
-import { parseLinksHeader } from './parseLinksHeader';
+import { parseLinksHeader } from './parse';
 
 describe('parseLinksHeader', () => {
   test('should parse a valid link header with three links', () => {

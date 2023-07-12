@@ -1,6 +1,6 @@
 import { SearchBox, SelectBox } from '@/components/UI/input';
 import CountryList from '@/components/countryList';
-import { Country, Region } from '@/utils/types';
+import { Country, Region } from '@/types/types';
 import LoadingView from '@/views/Loading';
 
 export default function CountriesListView({
